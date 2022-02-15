@@ -36,31 +36,7 @@ jobs:
       
       - run: dotnet nuget add source https://nuget.bepinex.dev/v3/index.json
       - run: nuget restore src\UnityExplorer.sln      
-      
-      # BepInEx Il2Cpp
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_BIE_Cpp
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.BepInEx.Il2Cpp
-          path: ./Release/UnityExplorer.BepInEx.Il2Cpp/*
      
-      # BepInEx 5 Mono
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_BIE5_Mono
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.BepInEx5.Mono
-          path: ./Release/UnityExplorer.BepInEx5.Mono/*
-      
-      # BepInEx 6 Mono
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_BIE6_Mono
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.BepInEx6.Mono
-          path: ./Release/UnityExplorer.BepInEx6.Mono/*
-      
       # MelonLoader Il2Cpp
       - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_ML_Cpp
       
@@ -68,28 +44,4 @@ jobs:
         with:
           name: UnityExplorer.MelonLoader.Il2Cpp
           path: ./Release/UnityExplorer.MelonLoader.Il2Cpp/*
-      
-      # MelonLoader Mono
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_ML_Mono
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.MelonLoader.Mono
-          path: ./Release/UnityExplorer.MelonLoader.Mono/*
-      
-      # Standalone Il2Cpp
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_STANDALONE_Cpp
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.Standalone.Il2Cpp
-          path: ./Release/UnityExplorer.Standalone.Il2Cpp/*
-      
-      # Standalone Mono
-      - run: msbuild src\UnityExplorer.csproj -t:Rebuild -p:Platform="AnyCPU" -p:Configuration=Release_STANDALONE_Mono
-      
-      - uses: actions/upload-artifact@v2
-        with:
-          name: UnityExplorer.Standalone.Mono
-          path: ./Release/UnityExplorer.Standalone.Mono/*
       
