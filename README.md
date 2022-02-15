@@ -1,3 +1,8 @@
+# For Genshin Impact MelonLoader
+This fork is created to fix the cursor. The cursor is still not displayed, but an in-game cursor is being created. Changing the cursor symbol and color is available in the UnityExplorer settings.
+
+`Saving the configuration throws an error. Write in the discussion if you find the root of the problem or solve the problem in your fork. I'm not a very good programmer.`
+
 <p align="center">
   <img align="center" src="img/icon.png">
 </p>
