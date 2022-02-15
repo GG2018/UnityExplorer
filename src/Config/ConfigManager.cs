@@ -32,6 +32,8 @@ namespace UnityExplorer.Config
         public static ConfigElement<bool> Hide_On_Startup;
         public static ConfigElement<float> Startup_Delay_Time;
         public static ConfigElement<string> Reflection_Signature_Blacklist;
+        public static ConfigElement<char> CursorChar;
+        public static ConfigElement<Color> CursorColor;
 
         // internal configs
         internal static InternalConfigHandler InternalHandler { get; private set; }
@@ -130,6 +132,8 @@ namespace UnityExplorer.Config
                 "Seperate signatures with a semicolon ';'.\r\n" +
                 "For example, to blacklist Camera.main, you would add 'UnityEngine.Camera.main;'",
                 "");
+            CursorChar = new ConfigElement<char>("Cursor Char", "Just Cursor Char", 'X');
+            CursorColor = new ConfigElement<Color>("Cursor Color", "", Color.yellow);
         }
     }
 }

@@ -81,6 +81,7 @@ namespace UnityExplorer.UI
 
         internal static void InitUI()
         {
+            CursorFix.Init();
             UiBase = UniversalUI.RegisterUI(ExplorerCore.GUID, Update);
 
             UIRootRect = UIRoot.GetComponent<RectTransform>();
